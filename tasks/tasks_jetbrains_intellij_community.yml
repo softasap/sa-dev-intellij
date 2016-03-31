@@ -23,7 +23,6 @@
       -intellij
       -setup
 
-
   - name: JetBrains IntelliJ| Decompress IntelliJ archive
     unarchive:
       src={{apps_dir}}/intellij.tar.gz
@@ -79,7 +78,7 @@
       icon: "{{apps_dir}}/intellij/bin/idea.png",
       comment: "Develop with IntelliJ!",
       categories: "Development;IDE;",
-      startupwmclass: "jetbrains-intellij" 
+      startupwmclass: "jetbrains-intellij"
       }
     tags:
       -jetbrains
