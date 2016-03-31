@@ -1,0 +1,12 @@
+---
+# defaults file for sa-dev-intellij
+
+option_install_java: false
+
+java_version: 7
+
+intellij_version: 14.1.4
+
+root_dir: "{{role_path}}"
+deploy_user: "{{ansible_user_id}}"
+apps_dir: "/home/{{ansible_user_id}}/apps"

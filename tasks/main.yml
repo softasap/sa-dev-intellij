@@ -1,0 +1,6 @@
+---
+# tasks file for sa-dev-intellij
+  - include: tasks_java.yml
+    when: option_install_java
+
+  - include: tasks_jetbrains_intellij_community.yml
