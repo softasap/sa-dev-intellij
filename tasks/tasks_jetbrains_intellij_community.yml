@@ -1,8 +1,6 @@
 ---
   - name: JetBrains| ensure apps folder exists
-    shell:
-      mkdir -p {{apps_dir}}
-      creates="{{apps_dir}}"
+    file: path="{{apps_dir}}" state=directory
 
   - name: JetBrains IntelliJ| Test if folder exist
     stat:
@@ -22,6 +20,7 @@
       -jetbrains
       -intellij
       -setup
+
 
   - name: JetBrains IntelliJ| Decompress IntelliJ archive
     unarchive:
@@ -60,7 +59,7 @@
       src={{apps_dir}}/intellij/bin/idea.sh
       dest=/usr/bin/idea
       state=link
-    sudo: yes
+    become: yes
     tags:
       -jetbrains
       -intellij
